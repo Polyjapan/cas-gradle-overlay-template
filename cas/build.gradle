@@ -53,6 +53,10 @@ repositories {
 
 dependencies {
     compile "org.apereo.cas:cas-server-webapp-tomcat:${project.'cas.version'}@war"
+
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+
     if (!project.hasProperty('bootiful')) {
         // Support for delegating auth to other CAS servers
         compile "org.apereo.cas:cas-server-support-pac4j-webflow:${project.'cas.version'}"
